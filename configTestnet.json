@@ -1,0 +1,15 @@
+{
+    "OWNER_ADDRESS": "0x58b522D3948a51B66b5C359c4AFaC4FA44D02765",
+    "pKey": "30bff7d603f44ec3202b777daf2c99d6bb2269e8fcda59d045a3c19df60210dc",
+    "connectionURL": "https://data-seed-prebsc-1-s1.binance.org:8545/",
+    "connectionURL1": "https://speedy-nodes-nyc.moralis.io/a61a52180976b08f4ff81c83/polygon/mumbai",
+    "BSCContractAddress": "0x6b77d7A2Ccdf1b12d620ef35cf587d8112A5B2d2",
+    "BRISEContractAddress": "0xE5154fd24ba35E731464D1B5bfE0E8527d116B2e",
+    "chainIdBRISE":80001,
+    "chainIdBSC":97,
+    "GAS_LIMIT_bsc": 810000,
+    "GAS_LIMIT_BRISE":103120,
+    "fromChainETH": "eth",
+    "fromChainBSC": "bsc"
+}
+
