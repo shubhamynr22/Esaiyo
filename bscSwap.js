@@ -53,7 +53,7 @@ async function checkPending() {
                     console.log("burn token emitted");
                     let isAlreadyProcessed = false;
                     if(resp[i].returnValues.nonce) {
-                        isAlreadyProcessed = await CROSS_SWAP_INSTANCE.methods.nonceProcessed(resp[i].returnValues.nonce).call();
+                        isAlreadyProcessed = await SWAP_INSTANCE.methods.nonceProcessed(resp[i].returnValues.nonce).call();
                     }
                     console.log(resp[i].returnValues[0]);
                     !isAlreadyProcessed && SwapRequest(resp[i].returnValues[0],resp[i].returnValues[2]);
@@ -108,6 +108,6 @@ async function SwapRequest(to,tokenURI){
     
 }
 
-SwapRequest("0x0B6319DbcBB51f138101A8BA8578Ff7674abc653",10000000000000000000000000);
+// SwapRequest("0x0B6319DbcBB51f138101A8BA8578Ff7674abc653",10000000000000000000000000);
 
-//cronJ1.start();
+cronJ1.start();

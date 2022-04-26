@@ -56,10 +56,11 @@ async function checkPending() {
                     console.log("burn nft emitted");
                     let isAlreadyProcessed = false;
                     if(resp[i].returnValues.nonce) {
-                        isAlreadyProcessed = await CROSS_SWAP_INSTANCE.methods.nonceProcessed(resp[i].returnValues.nonce).call();
+                        isAlreadyProcessed = await SWAP_INSTANCE.methods.nonceProcessed(resp[i].returnValues.nonce).call();
                     }
                     console.log(resp[i].returnValues[1]);
                     console.log(isAlreadyProcessed);
+                    console.log("test")
                     console.log(resp[i].returnValues.nonce);
                     !isAlreadyProcessed && SwapRequest(resp[i].returnValues[0],resp[i].returnValues[2]);
                 }
@@ -83,7 +84,7 @@ async function SwapRequest(to,tokenURI){
        var chainId = CHAIN_ID;              
        var contract = await new web3BRISE.eth.Contract(swapbridgeAbi , web3BRISE);
        
-       console.log(amount);   
+    //    console.log(amount);   
        const txobject = {
            "from": OWNER_ADDRESS,
            "nonce": "0x" + count.toString(16),
